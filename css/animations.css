@@ -188,13 +188,13 @@
 
 .anim-hidden-left {
   opacity: 0;
-  transform: translateX(-60px);
+  transform: translateX(-40px);
   transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
 
 .anim-hidden-right {
   opacity: 0;
-  transform: translateX(60px);
+  transform: translateX(40px);
   transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
 

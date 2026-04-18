@@ -400,6 +400,7 @@
    ================================================ */
 .story-section {
   background: var(--bg-secondary);
+  overflow: clip;
 }
 
 .story-grid {
