@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gelato Dreams — Handcrafted artisan gelato made with love since 1987. Explore our signature flavors crafted from the finest seasonal ingredients.">
+  <meta name="keywords" content="gelato, ice cream, artisan, handcrafted, Italian, flavors, dessert">
+  <meta name="author" content="Gelato Dreams">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gelato Dreams — Crafted with Passion, Served with Love">
+  <meta property="og:description" content="Handcrafted artisan gelato made with love since 1987. Explore our signature flavors.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-bg.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gelato Dreams">
+  <meta name="twitter:description" content="Handcrafted artisan gelato made with love since 1987.">
+
+  <title>Gelato Dreams — Crafted with Passion, Served with Love</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍦</text></svg>">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-inner">
+      <a href="#hero" class="navbar-logo">
+        <span class="navbar-logo-icon">🍦</span>
+        <span>Gelato Dreams</span>
+      </a>
+
+      <div class="navbar-links">
+        <a href="#story" class="navbar-link" data-i18n="nav.story">Our Story</a>
+        <a href="#flavors" class="navbar-link" data-i18n="nav.flavors">Flavors</a>
+        <a href="#process" class="navbar-link" data-i18n="nav.process">How It's Made</a>
+        <a href="#testimonials" class="navbar-link" data-i18n="nav.testimonials">Reviews</a>
+        <a href="#contact" class="navbar-link" data-i18n="nav.contact">Visit Us</a>
+      </div>
+
+      <div class="navbar-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="icon">☀️</span>
+        </button>
+
+        <!-- Language Dropdown -->
+        <div class="dropdown lang-dropdown">
+          <button class="dropdown-trigger" aria-label="Change language">
+            <span class="lang-flag">🇬🇧</span>
+            <span>EN</span>
+            <span style="font-size: 10px; opacity: 0.5;">▼</span>
+          </button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item active" data-lang="en">
+              <span class="lang-flag">🇬🇧</span> English
+            </button>
+            <button class="dropdown-item" data-lang="fr">
+              <span class="lang-flag">🇫🇷</span> Français
+            </button>
+            <button class="dropdown-item" data-lang="ar">
+              <span class="lang-flag">🇸🇦</span> العربية
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-label="Mobile menu">
+    <a href="#hero" class="mobile-drawer-link" data-i18n="nav.home">Home</a>
+    <a href="#story" class="mobile-drawer-link" data-i18n="nav.story">Our Story</a>
+    <a href="#flavors" class="mobile-drawer-link" data-i18n="nav.flavors">Flavors</a>
+    <a href="#process" class="mobile-drawer-link" data-i18n="nav.process">How It's Made</a>
+    <a href="#testimonials" class="mobile-drawer-link" data-i18n="nav.testimonials">Reviews</a>
+    <a href="#contact" class="mobile-drawer-link" data-i18n="nav.contact">Visit Us</a>
+    
+    <div class="mobile-drawer-actions">
+      <button class="theme-toggle" id="mobile-theme-toggle" aria-label="Toggle theme">
+        <span class="icon">☀️</span>
+      </button>
+      <div class="dropdown lang-dropdown">
+        <button class="dropdown-trigger" aria-label="Change language">
+          <span class="lang-flag">🇬🇧</span>
+          <span>EN</span>
+          <span style="font-size: 10px; opacity: 0.5;">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item active" data-lang="en">
+            <span class="lang-flag">🇬🇧</span> English
+          </button>
+          <button class="dropdown-item" data-lang="fr">
+            <span class="lang-flag">🇫🇷</span> Français
+          </button>
+          <button class="dropdown-item" data-lang="ar">
+            <span class="lang-flag">🇸🇦</span> العربية
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/hero-bg.png" alt="Artisan gelato display" data-parallax="0.15" data-parallax-dir="scale" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="sprinkles" aria-hidden="true"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge" data-i18n="hero.badge">✨ Artisan Gelato Since 1987</div>
+      
+      <h1 class="hero-title">
+        <span class="word"><span data-i18n="hero.title.1">Crafted with</span></span>
+        <br>
+        <span class="word"><span class="accent-text" data-i18n="hero.title.2">Passion,</span></span>
+        <br>
+        <span class="word"><span data-i18n="hero.title.3">Served with Love</span></span>
+      </h1>
+
+      <p class="hero-description" data-i18n="story.p1">Born in the sun-kissed hills of Tuscany in 1987, Gelato Dreams began as a small family cart on the cobblestone streets of Florence.</p>
+
+      <div class="hero-actions">
+        <a href="#flavors" class="btn btn-primary btn-ripple" data-i18n="hero.cta.primary">Explore Flavors</a>
+        <a href="#story" class="btn btn-secondary" data-i18n="hero.cta.secondary">Our Story</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse"></div>
+      <span data-i18n="hero.scroll">Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== OUR STORY ===== -->
+  <section class="section story-section" id="story">
+    <div class="container">
+      <div class="section-header anim-hidden">
+        <span class="section-badge" data-i18n="story.badge">Our Story</span>
+        <h2 class="section-title" data-i18n="story.title">A Family Tradition of Sweet Perfection</h2>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-image-wrapper anim-hidden-left" data-parallax="0.08">
+          <img src="assets/our-story.png" alt="Gelato artisan at work">
+          <div class="story-image-accent" aria-hidden="true"></div>
+        </div>
+
+        <div class="story-text anim-hidden-right">
+          <p data-i18n="story.p1">Born in the sun-kissed hills of Tuscany in 1987, Gelato Dreams began as a small family cart on the cobblestone streets of Florence. Our founder, Nonna Maria, believed that gelato wasn't just a dessert — it was a way to make people smile.</p>
+          <p data-i18n="story.p2">Three generations later, we still use her original recipes, sourcing the finest ingredients from local farmers and bringing that same warmth and joy to every scoop we serve.</p>
+
+          <div class="story-counters stagger-children">
+            <div class="counter-item">
+              <div class="counter-number" data-target="37" data-suffix="+">0</div>
+              <div class="counter-label" data-i18n="story.counter.years">Years</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-number" data-target="48" data-suffix="">0</div>
+              <div class="counter-label" data-i18n="story.counter.flavors">Flavors</div>
+            </div>
+            <div class="counter-item">
+              <div class="counter-number" data-target="250" data-suffix="K+">0</div>
+              <div class="counter-label" data-i18n="story.counter.customers">Happy Customers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLAVOR EXPLORER ===== -->
+  <section class="section" id="flavors">
+    <div class="container">
+      <div class="section-header anim-hidden">
+        <span class="section-badge" data-i18n="flavors.badge">Our Menu</span>
+        <h2 class="section-title" data-i18n="flavors.title">Discover Our Artisan Flavors</h2>
+        <p class="section-subtitle" data-i18n="flavors.subtitle">Each flavor is handcrafted daily using traditional Italian methods and the finest seasonal ingredients.</p>
+      </div>
+
+      <div class="flavors-filter anim-hidden">
+        <button class="filter-btn active" data-filter="all" data-i18n="flavors.filter.all">All</button>
+        <button class="filter-btn" data-filter="classic" data-i18n="flavors.filter.classic">Classic</button>
+        <button class="filter-btn" data-filter="fruity" data-i18n="flavors.filter.fruity">Fruity</button>
+        <button class="filter-btn" data-filter="exotic" data-i18n="flavors.filter.exotic">Exotic</button>
+        <button class="filter-btn" data-filter="seasonal" data-i18n="flavors.filter.seasonal">Seasonal</button>
+      </div>
+
+      <div class="flavors-grid" id="flavors-grid" style="transition: opacity 0.3s ease, transform 0.3s ease;">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT'S MADE ===== -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <div class="section-header anim-hidden">
+        <span class="section-badge" data-i18n="process.badge">Our Craft</span>
+        <h2 class="section-title" data-i18n="process.title">How We Make Magic</h2>
+        <p class="section-subtitle" data-i18n="process.subtitle">Every scoop tells a story of passion, patience, and perfection.</p>
+      </div>
+
+      <div class="process-timeline">
+        <!-- Step 1 -->
+        <div class="process-step anim-hidden">
+          <div class="process-step-number">1</div>
+          <div class="process-step-content">
+            <div class="process-step-icon">🌾</div>
+            <h4 data-i18n="process.step1.title">Source the Finest</h4>
+            <p data-i18n="process.step1.desc">Each morning, we handpick the freshest seasonal ingredients from local farms and trusted artisan suppliers around the world.</p>
+          </div>
+          <div class="process-step-visual" data-parallax="0.06">
+            <img src="assets/ingredients.png" alt="Fresh ingredients">
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step anim-hidden">
+          <div class="process-step-number">2</div>
+          <div class="process-step-content">
+            <div class="process-step-icon">🔄</div>
+            <h4 data-i18n="process.step2.title">Slow Churn Perfection</h4>
+            <p data-i18n="process.step2.desc">Using traditional Italian batch freezers, we slowly churn small batches to create the densest, creamiest texture possible.</p>
+          </div>
+          <div class="process-step-visual" data-parallax="0.06">
+            <img src="assets/our-story.png" alt="Slow churning process">
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step anim-hidden">
+          <div class="process-step-number">3</div>
+          <div class="process-step-content">
+            <div class="process-step-icon">🎨</div>
+            <h4 data-i18n="process.step3.title">Craft with Love</h4>
+            <p data-i18n="process.step3.desc">Our gelato artisans fold, swirl, and layer each flavor by hand — creating unique textures and flavor profiles in every batch.</p>
+          </div>
+          <div class="process-step-visual" data-parallax="0.06">
+            <img src="assets/flavors-grid.png" alt="Crafted flavors">
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step anim-hidden">
+          <div class="process-step-number">4</div>
+          <div class="process-step-content">
+            <div class="process-step-icon">😋</div>
+            <h4 data-i18n="process.step4.title">Serve with Joy</h4>
+            <p data-i18n="process.step4.desc">From our display case to your cone, every scoop is served with a smile and the promise of pure happiness.</p>
+          </div>
+          <div class="process-step-visual" data-parallax="0.06">
+            <img src="assets/hero-bg.png" alt="Served with joy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header anim-hidden">
+        <span class="section-badge" data-i18n="testimonials.badge">What People Say</span>
+        <h2 class="section-title" data-i18n="testimonials.title">Loved by Thousands</h2>
+        <p class="section-subtitle" data-i18n="testimonials.subtitle">Don't take our word for it — hear from the gelato lovers who keep coming back.</p>
+      </div>
+
+      <div class="testimonials-carousel anim-hidden-scale">
+        <div class="testimonials-track" id="testimonials-track">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <p class="testimonial-quote" data-i18n="testimonial.1.quote">The Sicilian Pistachio gelato transported me straight to Italy. I've been coming back every week since I discovered this gem. Absolutely life-changing!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">S</div>
+              <div class="testimonial-info">
+                <h5 data-i18n="testimonial.1.name">Sophie Laurent</h5>
+                <p data-i18n="testimonial.1.title">Food Blogger</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <p class="testimonial-quote" data-i18n="testimonial.2.quote">Best ice cream I've ever had, period. The attention to detail and quality of ingredients is evident in every single bite. My kids are obsessed with the vanilla.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">M</div>
+              <div class="testimonial-info">
+                <h5 data-i18n="testimonial.2.name">Marco Rossini</h5>
+                <p data-i18n="testimonial.2.title">Local Regular</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <p class="testimonial-quote" data-i18n="testimonial.3.quote">As someone with dairy allergies, finding the Mango Sorbet was a dream come true. Pure, intense flavor without any compromise. Thank you, Gelato Dreams!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <div class="testimonial-info">
+                <h5 data-i18n="testimonial.3.name">Aria Chen</h5>
+                <p data-i18n="testimonial.3.title">Satisfied Customer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <p class="testimonial-quote" data-i18n="testimonial.4.quote">The Blueberry Lavender is poetry in a cup. I've traveled the world tasting gelato, and this little shop rivals the best I've found in Rome and Florence.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">J</div>
+              <div class="testimonial-info">
+                <h5 data-i18n="testimonial.4.name">James McAllister</h5>
+                <p data-i18n="testimonial.4.title">Travel Writer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-dots">
+          <button class="dot active" aria-label="Slide 1"></button>
+          <button class="dot" aria-label="Slide 2"></button>
+          <button class="dot" aria-label="Slide 3"></button>
+          <button class="dot" aria-label="Slide 4"></button>
+        </div>
+
+        <div class="testimonials-nav">
+          <button class="testimonial-nav-btn" id="testimonial-prev" aria-label="Previous testimonial">←</button>
+          <button class="testimonial-nav-btn" id="testimonial-next" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISIT US / CONTACT ===== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header anim-hidden">
+        <span class="section-badge" data-i18n="contact.badge">Visit Us</span>
+        <h2 class="section-title" data-i18n="contact.title">Come Say Hello</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">We'd love to welcome you. Stop by for a scoop, a smile, and a taste of something extraordinary.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info anim-hidden-left">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <h5 data-i18n="contact.address.label">Find Us</h5>
+              <p data-i18n="contact.address.value">42 Gelato Lane, Florence District<br>Downtown, Suite 100</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div>
+              <h5 data-i18n="contact.hours.label">Opening Hours</h5>
+              <p data-i18n="contact.hours.value">Mon-Thu: 11am – 9pm<br>Fri-Sat: 11am – 11pm<br>Sun: 12pm – 8pm</p>
+              <span class="open-badge" id="open-status" data-i18n="contact.open">Open Now</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <h5 data-i18n="contact.phone.label">Call Us</h5>
+              <p data-i18n="contact.phone.value">+1 (555) 123-GELATO</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div>
+              <h5 data-i18n="contact.email.label">Email</h5>
+              <p data-i18n="contact.email.value">hello@gelatodreams.com</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-link icon-bounce" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link icon-bounce" aria-label="Facebook">👍</a>
+            <a href="#" class="social-link icon-bounce" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link icon-bounce" aria-label="TikTok">🎵</a>
+          </div>
+
+          <div class="map-container">
+            <span class="map-icon">🗺️</span>
+          </div>
+        </div>
+
+        <div class="contact-form anim-hidden-right">
+          <h4 data-i18n="contact.form.title">Send us a Message</h4>
+          <form id="contact-form">
+            <div class="form-inputs">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" class="form-input" id="contact-name" placeholder=" " required>
+                  <label class="form-label" for="contact-name" data-i18n="contact.form.name">Your Name</label>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-input" id="contact-email" placeholder=" " required>
+                  <label class="form-label" for="contact-email" data-i18n="contact.form.email">Your Email</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-input" id="contact-subject" placeholder=" " required>
+                <label class="form-label" for="contact-subject" data-i18n="contact.form.subject">Subject</label>
+              </div>
+              <div class="form-group">
+                <textarea class="form-input form-textarea" id="contact-message" placeholder=" " required></textarea>
+                <label class="form-label" for="contact-message" data-i18n="contact.form.message">Your Message</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-ripple form-submit" data-i18n="contact.form.submit">Send Message</button>
+            </div>
+            <div class="form-success">
+              <div class="form-success-icon">✅</div>
+              <h4 data-i18n="contact.form.success.title">Message Sent!</h4>
+              <p data-i18n="contact.form.success.text">Thanks for reaching out. We'll get back to you within 24 hours.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="navbar-logo">
+            <span class="navbar-logo-icon">🍦</span>
+            <span>Gelato Dreams</span>
+          </a>
+          <p data-i18n="footer.description">Handcrafted artisan gelato made with love since 1987. Every scoop is a journey to Italy.</p>
+          <div class="social-links">
+            <a href="#" class="social-link icon-bounce" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link icon-bounce" aria-label="Facebook">👍</a>
+            <a href="#" class="social-link icon-bounce" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link icon-bounce" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.col1.title">Quick Links</h5>
+          <a href="#flavors" data-i18n="footer.col1.link1">Our Menu</a>
+          <a href="#story" data-i18n="footer.col1.link2">About Us</a>
+          <a href="#" data-i18n="footer.col1.link3">Catering</a>
+          <a href="#" data-i18n="footer.col1.link4">Careers</a>
+        </div>
+
+        <div class="footer-col">
+          <h5 data-i18n="footer.col2.title">Legal</h5>
+          <a href="#" data-i18n="footer.col2.link1">Privacy Policy</a>
+          <a href="#" data-i18n="footer.col2.link2">Terms of Service</a>
+          <a href="#" data-i18n="footer.col2.link3">Cookie Policy</a>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h5 data-i18n="footer.newsletter.title">Stay in the Loop</h5>
+          <p data-i18n="footer.newsletter.text">Subscribe for seasonal flavor drops, events, and exclusive offers.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" class="newsletter-input" data-i18n="footer.newsletter.placeholder" placeholder="your@email.com">
+            <button type="button" class="newsletter-btn" data-i18n="footer.newsletter.btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">© 2026 Gelato Dreams. All rights reserved.</p>
+        <p data-i18n="footer.made">Made with 🍦 and ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Flavor Modal -->
+  <div class="modal-overlay" id="flavor-modal-overlay">
+    <div class="modal" id="flavor-modal">
+      <button class="modal-close" id="flavor-modal-close" aria-label="Close">✕</button>
+      <div class="flavor-modal-img"></div>
+      <div class="flavor-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/flavors.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
